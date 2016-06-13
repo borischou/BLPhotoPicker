@@ -12,6 +12,7 @@
 @class BLPhotoSelectionCollectionViewController;
 @protocol BLPhotoSelectionCollectionViewControllerDelegate <NSObject>
 
+@optional
 -(void)photoSelectionCollectionViewController:(BLPhotoSelectionCollectionViewController *)viewController
                          didFetchPickedPhotos:(NSMutableArray *)photos;
 -(void)photoSelectionCollectionViewControllerDidDismiss:(BLPhotoSelectionCollectionViewController *)viewController;
@@ -23,8 +24,6 @@
 @interface BLPhotoSelectionCollectionViewController : UICollectionViewController
 
 @property (weak, nonatomic) id <BLPhotoSelectionCollectionViewControllerDelegate> delegate;
-
-@property (nonatomic) NSInteger chosenCount;
 
 -(instancetype)initWithMaxPhotoNumber:(NSInteger)count;
 

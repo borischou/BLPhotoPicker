@@ -42,7 +42,7 @@ static const CGFloat scale = 1.0;
     {
         self.delegate = self;
         self.dataSource = self;
-        _maxCount = count;
+        _maxCount = count > 9 ? 9 : count;
         _layout = (UICollectionViewFlowLayout *)layout;
         [self preparePhotoDataWithLayout:(UICollectionViewFlowLayout *)layout];
         [self registerClass:[BLPhotoSelectionCollectionViewCell class] forCellWithReuseIdentifier:@"reuseCell"];
